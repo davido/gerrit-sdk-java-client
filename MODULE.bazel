@@ -1,4 +1,7 @@
-module(name = "gerrit_sdk_java_client", version = "0.0.0")
+module(
+    name = "gerrit_sdk_java_client",
+    version = "0.0.0",
+)
 
 bazel_dep(name = "rules_jvm_external", version = "7.1")
 bazel_dep(name = "rules_java", version = "9.9.0")
