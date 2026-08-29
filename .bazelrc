@@ -1,0 +1,5 @@
+# The example uses modern Java (switch expressions); build for Java 21 (Gerrit's level).
+common --java_language_version=21
+common --java_runtime_version=remotejdk_21
+common --tool_java_language_version=21
+common --tool_java_runtime_version=remotejdk_21

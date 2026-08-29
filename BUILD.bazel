@@ -1,0 +1,8 @@
+load("@rules_java//java:defs.bzl", "java_binary")
+
+java_binary(
+    name = "get-change-detail",
+    srcs = ["GetChangeDetail.java"],
+    main_class = "GetChangeDetail",
+    deps = ["@maven//:com_github_davido_gerrit_sdk_java"],
+)
