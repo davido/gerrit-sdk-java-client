@@ -35,12 +35,12 @@ generated `com.google.gerrit.client.*` classes, and runs it against a live Gerri
 `MODULE.bazel`:
 ```python
 maven.install(
-    artifacts = ["com.github.davido:gerrit-sdk-java:246c0d5"],
+    artifacts = ["com.github.davido:gerrit-sdk-java:0ba3661"],
     repositories = ["https://jitpack.io", "https://repo1.maven.org/maven2"],
 )
 ```
 
-**Note on the pinned coordinate.** It pins a **commit** (`246c0d5`), not the tag: JitPack
+**Note on the pinned coordinate.** It pins a **commit** (`0ba3661`), not the tag: JitPack
 cached a *pre-fix failure* for the `v3.15.0-SNAPSHOT` tag (before the SDK gained its Maven
 wrapper), and JitPack does not rebuild a force-moved tag. Clear that cached build in the
 JitPack UI (`https://jitpack.io/#davido/gerrit-sdk-java`) and the coordinate can become
