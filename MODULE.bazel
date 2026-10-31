@@ -8,10 +8,9 @@ bazel_dep(name = "rules_java", version = "9.9.0")
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 
-# Fetch the Gerrit SDK straight from JitPack (which builds the tag/commit into a Maven
-# artifact on demand). Pinned to a commit for now: JitPack cached a pre-fix *failure* for
-# the v3.15.0-SNAPSHOT tag, which must be cleared in the JitPack UI before the tag builds;
-# the commit build is clean. rules_jvm_external resolves okhttp/gson/etc. from Central.
+# Fetch the Gerrit SDK from JitPack (which builds the commit into a Maven artifact on
+# demand). We pin a specific commit SHA, so the resolution is stable.
+# rules_jvm_external resolves okhttp/gson/etc. from Central.
 maven.install(
     artifacts = ["com.github.davido:gerrit-sdk-java:fdc0fbe"],
     repositories = [

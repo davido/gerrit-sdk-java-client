@@ -41,12 +41,10 @@ maven.install(
 )
 ```
 
-**Note on the pinned coordinate.** It pins a **commit**, not the tag: JitPack
-cached a *pre-fix failure* for the `v3.15.0-SNAPSHOT` tag (before the SDK gained its Maven
-wrapper), and JitPack does not rebuild a force-moved tag. Clear that cached build in the
-JitPack UI (`https://jitpack.io/#davido/gerrit-sdk-java`) and the coordinate can become
-`com.github.davido:gerrit-sdk-java:v3.15.0-SNAPSHOT`. Commit builds are unaffected and
-green.
+**Note on the pinned coordinate.** It pins a specific **commit SHA**, not a tag, so the
+resolution is stable (exactly like the Kotlin client). See
+[`MODULE.bazel`](MODULE.bazel) for the authoritative pinned
+`com.github.davido:gerrit-sdk-java` coordinate.
 
 `.bazelrc` sets the Java language level to 21 (Gerrit's level; the example uses switch
 expressions).
