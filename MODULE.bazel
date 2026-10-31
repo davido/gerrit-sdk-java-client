@@ -12,7 +12,7 @@ maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 # demand). We pin a specific commit SHA, so the resolution is stable.
 # rules_jvm_external resolves okhttp/gson/etc. from Central.
 maven.install(
-    artifacts = ["com.github.davido:gerrit-sdk-java:fdc0fbe"],
+    artifacts = ["com.github.davido:gerrit-sdk-java:c2ce963"],
     repositories = [
         "https://jitpack.io",
         "https://repo1.maven.org/maven2",
